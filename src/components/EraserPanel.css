@@ -1,0 +1,164 @@
+/*  ERASER PANEL  */
+
+.eraser-panel{
+  position:absolute;
+  left:95px;
+  top:50%;
+  transform:translateY(-50%);
+
+  background:#1f2937;
+  padding:18px;
+  border-radius:14px;
+  color:white;
+
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+
+  animation:eraserSlideIn 0.3s ease;
+}
+
+.eraser-panel.closing{
+  animation:eraserSlideOut 0.3s ease forwards;
+}
+
+@keyframes eraserSlideIn{
+  from{opacity:0; transform:translate(-20px,-50%);}
+  to{opacity:1; transform:translate(0,-50%);}
+}
+
+@keyframes eraserSlideOut{
+  from{opacity:1; transform:translate(0,-50%);}
+  to{opacity:0; transform:translate(-40px,-50%);}
+}
+
+/* TITLES */
+
+.eraser-panel h4{
+  margin:0;
+  font-size:15px;
+  text-align:center;
+}
+
+/* ROW */
+
+.eraser-row{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* BUTTON */
+
+.eraser-btn{
+  width:70px;
+  height:50px;
+
+  border:none;
+  border-radius:12px;
+
+  background:rgba(255,255,255,0.08);
+  color:white;
+  cursor:pointer;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+
+  transition:0.25s;
+}
+
+.eraser-btn:hover{
+  background:#ef4444;
+  transform:translateY(-2px);
+}
+
+.eraser-icon{
+  width:18px;
+}
+
+/* COLLAPSE */
+
+.eraser-btn.active{
+  background:#ef4444;
+  box-shadow:0 0 12px rgba(239,68,68,0.7);
+  transform:scale(1.05);
+}
+
+/*  ERASER COLLAPSE BUTTON  */
+.size-icon.small{ width:14px; }
+.size-icon.medium{ width:22px; }
+.size-icon.large{ width:32px; }
+.size-icon.xlarge{ width:42px; }
+
+.eraser-collapse-btn{
+  position:absolute;
+  left:-22px;
+  top:18px;
+
+  width:42px;
+  height:42px;
+
+  background:#374151;
+  border:none;
+  border-radius:12px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  cursor:pointer;
+  z-index:999;
+}
+
+/* ICON STYLE */
+
+.eraser-collapse-icon{
+  width:22px;
+  height:22px;
+
+  fill:white;
+  color:white;
+
+  flex-shrink:0;
+  display:block;
+}
+
+/* SVG fallback */
+
+.eraser-collapse-btn svg{
+  width:22px;
+  height:22px;
+  fill:white;
+  color:white;
+}
+
+/* Hover */
+
+.eraser-collapse-btn:hover{
+  background:#4b5563;
+  transform:scale(1.1);
+}
+/* Size icons */
+.size-icon{
+  color:white;
+}
+
+.size-icon.small{ width:12px; }
+.size-icon.medium{ width:18px; }
+.size-icon.large{ width:26px; }
+
+/* Mode icons */
+.eraser-icon{
+  width:22px;
+  color:white;
+}
+
+/* Pixel style */
+.pixel{
+  opacity:0.6;
+}

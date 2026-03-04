@@ -1,0 +1,235 @@
+/* ===== PANEL ===== */
+.pen-panel{
+  position:absolute;
+  left:95px;
+  top:50%;
+  transform:translateY(-50%);
+
+  background:#1f2937;
+  padding:18px;
+  border-radius:14px;
+  color:white;
+
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+
+/* ===== TITLES ===== */
+
+.pen-panel h4{
+  margin:0;
+  font-size:15px;
+  text-align:center;
+}
+
+/* ===== ROW ===== */
+
+.row{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+}
+
+/* ===== COLOR DOTS ===== */
+
+.dot{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:3px solid transparent;
+  cursor:pointer;
+  transition:0.25s;
+
+  box-shadow:0 6px 14px rgba(0,0,0,0.5);
+}
+
+.dot:hover{
+  transform:scale(1.25);
+  border-color:white;
+}
+
+.black{background:#111;}
+.blue{background:#2563eb;}
+.red{background:#ef4444;}
+
+/* ===== SIZE BUTTONS ===== */
+.size-btn{
+  width:60px;
+  height:60px;
+
+  border:none;
+  border-radius:14px;
+
+  background:rgba(255,255,255,0.08);
+  cursor:pointer;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+
+  transition:0.25s;
+}
+
+.size-btn:hover{
+  background:#3b82f6;
+  transform:translateY(-2px);
+}
+
+/* Brush icons */
+
+.brush-icon{
+  color:white;
+}
+
+.brush-icon.small{
+  width:18px;
+}
+
+.brush-icon.medium{
+  width:24px;
+}
+
+.brush-icon.big{
+  width:30px;
+}
+
+/* Stroke preview */
+
+.stroke{
+  width:26px;
+  border-radius:4px;
+}
+
+.line{
+  width:32px;
+  border-radius:4px;
+}
+
+
+
+.size-btn{
+  position:relative;
+}
+
+.tip{
+  position:absolute;
+  bottom:8px;
+  right:8px;
+
+  width:10px;
+  height:10px;
+  border-radius:50%;
+}
+/* COLLAPSE BUTTON */
+
+.collapse-btn{
+  position:absolute;
+  left:-22px;
+  top:18px;
+
+  width:42px;
+  height:42px;
+
+  background:#374151;
+  border:none;
+  border-radius:12px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  cursor:pointer;
+  z-index:999;
+}
+
+/* ICON STYLE (MOST IMPORTANT) */
+
+.collapse-icon{
+  width:22px;
+  height:22px;
+
+  fill:white;   
+  color:white;
+
+  flex-shrink:0;
+  display:block;
+}
+
+/* Hover */
+.collapse-btn svg{
+  width:22px;
+  height:22px;
+  fill:white;
+}
+
+.collapse-btn:hover{
+  background:#4b5563;
+  transform:scale(1.1);
+}
+
+.collapse-btn:hover{
+  background:#4b5563;
+  transform:scale(1.1);
+}
+
+/* OPEN ANIMATION */
+
+.pen-panel{
+  animation:slideIn 0.3s ease;
+}
+
+/* CLOSE ANIMATION */
+
+.pen-panel.closing{
+  animation:slideOut 0.3s ease forwards;
+}
+
+@keyframes slideIn{
+  from{
+    opacity:0;
+    transform:translate(-20px,-50%);
+  }
+  to{
+    opacity:1;
+    transform:translate(0,-50%);
+  }
+}
+
+@keyframes slideOut{
+  from{
+    opacity:1;
+    transform:translate(0,-50%);
+  }
+  to{
+    opacity:0;
+    transform:translate(-40px,-50%);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

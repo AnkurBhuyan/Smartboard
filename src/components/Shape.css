@@ -1,0 +1,54 @@
+/*  SHAPE PANEL  */
+
+.shape-panel{
+  position: fixed;
+
+  /*  Move closer to toolbar */
+  left: 75px;   
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+
+  padding:14px;
+
+  /* Pro grey UI */
+  background:#4b5563;
+
+  border-radius:16px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.35);
+
+  z-index:50;
+}
+
+/*  SHAPE BUTTONS  */
+
+.shape-btn{
+  width:50px;
+  height:50px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:none;
+  border-radius:14px;
+
+  background:transparent;
+  color:white;
+
+  cursor:pointer;
+  transition:0.2s ease;
+}
+
+.shape-btn:hover{
+  background:rgba(255,255,255,0.15);
+  transform:scale(1.12);
+}
+
+.shape-btn.active{
+  background:#3b82f6;
+}
