@@ -11,7 +11,7 @@
   display:flex;
   align-items:center;
 
-  /* ⭐ Better layout */
+  /*  Better layout */
   justify-content:flex-start;
   gap:30px;
 
@@ -43,7 +43,7 @@
   display:flex;
   gap:10px;
 
-  /* ⭐ Keeps buttons near title */
+  /*  Keeps buttons near title */
   margin-left:10px;
 }
 
